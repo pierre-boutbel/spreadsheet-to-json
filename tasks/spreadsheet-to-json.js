@@ -11,7 +11,8 @@ let options = {
     keyfile: argv.keyfile,
     spreadsheetId: argv.spreadsheetId,
     worksheetTitle: argv.worksheetTitle,
-    dest: argv.dest
+    dest: argv.dest,
+    filePrefix: argv.filePrefix || ''
 };
 
 let spreadsheet = new googleSpreadsheet(options.spreadsheetId);
@@ -42,7 +43,7 @@ function extractTranslationsAndWriteFile(worksheet) {
         extractTranslation(worksheet, langs, (translations) => {
             langs.forEach((lang) => {
                 if (translations.hasOwnProperty(lang)) {
-                    writeFile(translations[ lang ], options.dest + '/locale-' + lang + '.json');
+                    writeFile(translations[ lang ], options.dest + '/' + options.filePrefix + lang + '.json');
                 }
             });
         });
