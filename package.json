@@ -1,0 +1,19 @@
+{
+  "name": "fl-spreadsheet-to-json",
+  "version": "0.0.1",
+  "description": "A node script to fetch a spreadsheet and generate a json",
+  "author": {
+    "name": "Influans",
+    "email": "pierre.boutbel@influans.com"
+  },
+  "main": "tasks/spreadsheet-to-json.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+git@bitbucket.org:influansrd/spreadsheet-to-json.git"
+  },
+  "author": "Influans",
+  "license": "ISC",
+}
